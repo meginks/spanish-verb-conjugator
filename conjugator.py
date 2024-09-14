@@ -22,14 +22,15 @@ def make_present(infinitive):
     else: 
        print('Lo siento. No tenemos este verbo en el sistema.')
 print(make_present('abrir')) 
+print(make_present('alquilar'))
 
 
 # INFINITIVE -> IMPERFECT PAST 
 #RETURN TYPE : TUPLE in this order (yo, tú, él/ella/usted, nosotro/as, vosotros/as, ellos/ellas/ustedes) 
 def make_imperfect(infinitive): 
     if verbs[infinitive]:    
-        conjugated_verb = tuple((verbs[infinitive][0], 
-                                 verbs[infinitive][1],
+        conjugated_verb = tuple((yo_el_imperfecto(infinitive), 
+                                tu_imperfecto(infinitive),
                                 yo_el_imperfecto(infinitive),
                                 nosotros_imperfecto(infinitive),
                                 vosotros_imperfecto(infinitive),

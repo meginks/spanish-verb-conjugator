@@ -6,6 +6,7 @@ In the book Spanish Irregular Verbs Up Close of the McGraw Hill series Practice 
 I have done created this project as a way to help myself understand Spanish verbs better, but I have made it public in the event that thinking about it in this way is useful to anyone else who is learning Spanish. If you find an issue with it, please let me know. I obviously don't own the Spanish language, and I did not come up with these rules of conjugation, but I did write all the Python.  
 Gracias por visitar mi repo. 
 
+
 ##TO DO 
 - preterite 
 - irregular stems in preterit use different endings (how to deal with that in context of this code) 

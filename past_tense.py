@@ -13,7 +13,14 @@ def yo_el_imperfecto(infinitive):
         conjugated_form = second_person_present[:-2] + 'aba' 
     elif verb_ending == 'er' or 'ir': 
         conjugated_form = second_person_present[:-2] + 'ía' 
-    return conjugated_form 
+    return conjugated_form  
+
+
+# tú in imperfect  
+# PARAMETER : STRING infinitive form 
+# RETURN TYPE: STRING conjugated form  
+def tu_imperfecto(infinitive): 
+    return yo_el_imperfecto(infinitive) + 's'  
 
 # nosotros, nosotras in imperfect  
 # PARAMETER : STRING infinitive form 
