@@ -21,6 +21,7 @@ verbs = {
 'bailar': (), 
 'borrar': (), 
 'caber': (), 
+'caducar': (), 
 'caer': (), 
 'cocinar':(), 
 'comenzar':(), 
