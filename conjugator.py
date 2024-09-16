@@ -54,23 +54,23 @@ print(make_imperfect('abrir'))
 # INFINITIVE -> PRETERITE PAST 
 # PARAMETER : STRING in infinitive form 
 #RETURN TYPE : TUPLE in this order (yo, tú, él/ella/usted, nosotro/as, vosotros/as, ellos/ellas/ustedes) 
-def make_preterite(infinitive):  ## MIGHT GET TRICKY WITH IRREGULAR...
+def make_preterite(infinitive):  ## TODO -- handle irregular stem endings like tener and dar 
     if verbs[infinitive]:    
         conjugated_verb = tuple((verbs[infinitive][2], 
-                                 verbs[infinitive][1],
-                                yo_el_imperfecto(infinitive),
-                                nosotros_imperfecto(infinitive),
-                                vosotros_imperfecto(infinitive),
-                                ellos_imperfecto(infinitive))); 
+                                 tu_preterito(infinitive),
+                                el_preterito(infinitive),
+                                nosotros_preterito(infinitive),
+                                vosotros_preterito(infinitive),
+                                ellos_preterito(infinitive))); 
         return conjugated_verb
     else: 
         print('Lo siento. No tenemos este verbo en el sistema.')
     
-# print('PRETERITE TEST')
-# print(make_preterite('tener')) 
-# print(make_preterite('comprar')) 
-# print(make_preterite('sentarse'))
-# print(make_preterite('abrir'))
+print('PRETERITE TEST')
+print(make_preterite('tener')) 
+print(make_preterite('comprar')) 
+print(make_preterite('sentarse'))
+print(make_preterite('abrir'))
 
 # INFINITIVE -> FUTURE 
 # PARAMETER : STRING in infinitive form 

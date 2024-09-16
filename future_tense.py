@@ -1,6 +1,6 @@
 from helper_functions import * 
 
-
+##################### FUTURE ############################
 # yo in future   
 # PARAMETER : STRING infinitive form 
 # RETURN TYPE: STRING conjugated form  
@@ -36,3 +36,5 @@ def vosotros_futuro(infinitive):
 # RETURN TYPE: STRING conjugated form  
 def ellos_futuro(infinitive): 
     return el_futuro(infinitive) + 'n'
+
+##################### FUTURE PERFECT ########################

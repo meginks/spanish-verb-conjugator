@@ -9,10 +9,13 @@ from helper_functions import *
 def yo_el_imperfecto(infinitive):
     verb_ending = get_infinitive_ending(infinitive) 
     verb_stem = get_infinitive_stem(infinitive) 
-    if verb_ending == 'ar': 
-        conjugated_form = verb_stem + 'aba' 
-    elif verb_ending == 'er' or 'ir': 
-        conjugated_form = verb_stem + 'ía' 
+    if infinitive in imperfect_exceptions: 
+        conjugated_form = imperfect_exceptions[infinitive] 
+    else: 
+        if verb_ending == 'ar': 
+            conjugated_form = verb_stem + 'aba' 
+        elif verb_ending == 'er' or 'ir': 
+            conjugated_form = verb_stem + 'ía' 
     return conjugated_form  
 
 
@@ -27,11 +30,14 @@ def tu_imperfecto(infinitive):
 # RETURN TYPE: STRING conjugated form   
 def nosotros_imperfecto(infinitive): 
     verb_ending = get_infinitive_ending(infinitive) 
-    verb_stem = get_infinitive_stem(infinitive)
-    if verb_ending == 'ar': 
-        conjugated_form = verb_stem + 'ábamos' 
-    elif verb_ending == 'er' or 'ir': 
-        conjugated_form = verb_stem + 'íamos' 
+    if infinitive in imperfect_exceptions: 
+        conjugated_form = imperfect_exceptions_nos[infinitive] 
+    else: 
+        verb_stem = get_infinitive_stem(infinitive)
+        if verb_ending == 'ar': 
+            conjugated_form = verb_stem + 'ábamos' 
+        elif verb_ending == 'er' or 'ir': 
+            conjugated_form = verb_stem + 'íamos' 
     return conjugated_form 
 
 # vosotros / vosotras in imperfect  
@@ -48,7 +54,105 @@ def ellos_imperfecto(infinitive):
 
 ################### PRETERITO ######################## 
 
+# tú in preterite 
+# PARAMETER : STRING infinitive form 
+# RETURN TYPE: STRING conjugated form  
+def tu_preterito(infinitive): 
+    verb_ending = get_infinitive_ending(infinitive) 
+    if verb_ending == 'ar': 
+        conjugated_form = get_preterite_stem(infinitive) + 'aste' 
+    elif verb_ending == 'ir' or verb_ending == 'er': 
+         conjugated_form = get_preterite_stem(infinitive) + 'iste' 
+    return conjugated_form 
 
+# él / ella / usted in preterite 
+# PARAMETER : STRING infinitive form 
+# RETURN TYPE: STRING conjugated form  
+def el_preterito(infinitive): 
+    verb_ending = get_infinitive_ending(infinitive) 
+    if verb_ending == 'ar': 
+        conjugated_form = get_preterite_stem(infinitive) + 'ó' 
+    elif verb_ending == 'ir' or verb_ending == 'er': 
+         conjugated_form = get_preterite_stem(infinitive) + 'ió' 
+    return conjugated_form  
 
+# nosotros / nosotras in preterite 
+# PARAMETER : STRING infinitive form 
+# RETURN TYPE: STRING conjugated form  
+def nosotros_preterito(infinitive): 
+    verb_ending = get_infinitive_ending(infinitive) 
+    if verb_ending == 'ar': 
+        conjugated_form = get_preterite_stem(infinitive) + 'amos' 
+    elif verb_ending == 'ir' or verb_ending == 'er': 
+         conjugated_form = get_preterite_stem(infinitive) + 'imos' 
+    return conjugated_form 
+
+# vosotros / vosotras in preterite 
+# PARAMETER : STRING infinitive form 
+# RETURN TYPE: STRING conjugated form  
+def vosotros_preterito(infinitive): 
+    conjugated_form = tu_preterito(infinitive) + 'is' 
+    return conjugated_form 
+
+# ellos / ellas / ustedes in preterite 
+# PARAMETER : STRING infinitive form 
+# RETURN TYPE: STRING conjugated form  
+def ellos_preterito(infinitive): 
+    verb_ending = get_infinitive_ending(infinitive) 
+    if verb_ending == 'ar': 
+        conjugated_form = get_preterite_stem(infinitive) + 'aron' 
+    elif verb_ending == 'ir' or verb_ending == 'er': 
+         conjugated_form = get_preterite_stem(infinitive) + 'ieron' 
+    return conjugated_form 
 
 ################# SUBJUNTIVO ########################## 
+
+# tú in imperfect subjunctive 
+# PARAMETER : STRING infinitive form 
+# RETURN TYPE: STRING conjugated form  
+def tu_subjuntivo_pasado(infinitive): 
+    conjugated_form = '' 
+    return conjugated_form 
+
+# tú in imperfect subjunctive 
+# PARAMETER : STRING infinitive form 
+# RETURN TYPE: STRING conjugated form  
+def tu_subjuntivo_pasado(infinitive): 
+    conjugated_form = '' 
+    return conjugated_form 
+
+# él / ella / usted in subjunctive past
+# PARAMETER : STRING infinitive form 
+# RETURN TYPE: STRING conjugated form  
+def el_subjuntivo_pasado(infinitive): 
+    conjugated_form = '' 
+    return conjugated_form 
+
+# nosotros / nosotras in imperfect subjunctive 
+# PARAMETER : STRING infinitive form 
+# RETURN TYPE: STRING conjugated form  
+def nosotros_subjuntivo_pasado(infinitive): 
+    conjugated_form = '' 
+    return conjugated_form 
+
+# vosotros / vosotras in imperfect subjunctive 
+# PARAMETER : STRING infinitive form 
+# RETURN TYPE: STRING conjugated form  
+def vosotros_subjuntivo_pasado(infinitive): 
+    conjugated_form = '' 
+    return conjugated_form 
+
+# ellos / ellas / ustedes in imperfect subjunctive 
+# PARAMETER : STRING infinitive form 
+# RETURN TYPE: STRING conjugated form  
+def ellos_subjuntivo_pasado(infinitive): 
+    conjugated_form = '' 
+    return conjugated_form  
+
+
+
+## PAST SPECIFIC HELPERS 
+
+def get_3_pers_pl_preterite_stem(infinitive): 
+    third_pers_pl_preterite = ellos_preterito(infinitive) 
+    return third_pers_pl_preterite[:-2] 
