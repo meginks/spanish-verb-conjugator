@@ -8,11 +8,11 @@ from helper_functions import *
 # RETURN TYPE: STRING conjugated form   
 def yo_el_imperfecto(infinitive):
     verb_ending = get_infinitive_ending(infinitive) 
-    second_person_present = verbs[infinitive][1] 
+    verb_stem = get_infinitive_stem(infinitive) 
     if verb_ending == 'ar': 
-        conjugated_form = second_person_present[:-2] + 'aba' 
+        conjugated_form = verb_stem + 'aba' 
     elif verb_ending == 'er' or 'ir': 
-        conjugated_form = second_person_present[:-2] + 'ía' 
+        conjugated_form = verb_stem + 'ía' 
     return conjugated_form  
 
 
@@ -27,11 +27,11 @@ def tu_imperfecto(infinitive):
 # RETURN TYPE: STRING conjugated form   
 def nosotros_imperfecto(infinitive): 
     verb_ending = get_infinitive_ending(infinitive) 
-    second_person_present = verbs[infinitive][1] 
+    verb_stem = get_infinitive_stem(infinitive)
     if verb_ending == 'ar': 
-        conjugated_form = second_person_present[:-2] + 'ábamos' 
+        conjugated_form = verb_stem + 'ábamos' 
     elif verb_ending == 'er' or 'ir': 
-        conjugated_form = second_person_present[:-2] + 'íamos' 
+        conjugated_form = verb_stem + 'íamos' 
     return conjugated_form 
 
 # vosotros / vosotras in imperfect  
