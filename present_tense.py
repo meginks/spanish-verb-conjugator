@@ -49,3 +49,44 @@ def ellos_present(infinitive):
 
 # SUBJUNTIVO / SUBJUNCTIVE 
 
+# yo in subjunctive present 
+# PARAMETER : STRING infinitive form 
+# RETURN TYPE: STRING conjugated form   
+def yo_subjuntivo_presente(infinitive): 
+    conjugated_form = ''
+    return conjugated_form 
+
+# tú in subjunctive present 
+# PARAMETER : STRING infinitive form 
+# RETURN TYPE: STRING conjugated form   
+def tu_subjuntivo_presente(infinitive): 
+    conjugated_form = ''
+    return conjugated_form
+
+# él / ella / usted in subjunctive present 
+# PARAMETER : STRING infinitive form 
+# RETURN TYPE: STRING conjugated form   
+def el_subjuntivo_presente(infinitive): 
+    conjugated_form = ''
+    return conjugated_form
+
+# nosotros / nosotras in subjunctive present 
+# PARAMETER : STRING infinitive form 
+# RETURN TYPE: STRING conjugated form   
+def nosotros_subjuntivo_presente(infinitive): 
+    conjugated_form = ''
+    return conjugated_form
+
+# vosotros / vosotras in subjunctive present 
+# PARAMETER : STRING infinitive form 
+# RETURN TYPE: STRING conjugated form   
+def vosotros_subjuntivo_presente(infinitive): 
+    conjugated_form = ''
+    return conjugated_form
+
+# ellos / ellas / ustedes in subjunctive present 
+# PARAMETER : STRING infinitive form 
+# RETURN TYPE: STRING conjugated form   
+def ellos_subjuntivo_presente(infinitive): 
+    conjugated_form = ''
+    return conjugated_form

@@ -1,5 +1,6 @@
 from verbs import * 
 from helper_functions import * 
+from subjunctive_helper import * 
 
 ################ IMPERFECTO ##############################
 
@@ -145,8 +146,3 @@ def ellos_subjuntivo_pasado(infinitive):
 
 
 
-## PAST SPECIFIC HELPERS 
-
-def get_3_pers_pl_preterite_stem(infinitive): 
-    third_pers_pl_preterite = ellos_preterito(infinitive) 
-    return third_pers_pl_preterite[:-2] 
