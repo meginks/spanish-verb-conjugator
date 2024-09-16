@@ -1,3 +1,4 @@
+from rule_exceptions import * 
 
 # HELPER METHODS 
 def get_infinitive_ending(infinitive): 
@@ -9,8 +10,14 @@ def get_infinitive_ending(infinitive):
 
 def get_infinitive_stem(infinitive): 
     if (infinitive[-2:] == 'se'): 
-        endless_infinitive = infinitive[:-4] 
+        infinitive_stem = infinitive[:-4] 
     else: 
-        endless_infinitive = infinitive[:-2] 
-    return endless_infinitive 
+        infinitive_stem = infinitive[:-2] 
+    return infinitive_stem 
 
+
+def get_future_cond_stem(infinitive): 
+    if infinitive in future_cond_exceptions: 
+        return future_cond_exceptions[infinitive]
+    else: 
+        return get_infinitive_stem(infinitive)

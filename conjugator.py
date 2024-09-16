@@ -2,6 +2,8 @@ from verbs import *
 from helper_functions import *  
 from present_tense import * 
 from past_tense import * 
+from future_tense import * 
+from conditional_tense import * 
 ### Methods for manipulating verb data to conjugate 
 
 
@@ -20,10 +22,14 @@ def make_present(infinitive):
                                 ellos_present(infinitive))); 
         return conjugated_verb
     else: 
-       print('Lo siento. No tenemos este verbo en el sistema.')
-print(make_present('abrir')) 
-print(make_present('alquilar'))
+       print('Lo siento. No tenemos este verbo en el sistema.') 
 
+print('PRESENT TEST')
+print(make_present('tener')) 
+print(make_present('comprar')) 
+print(make_present('sentarse'))
+print(make_present('abrir'))
+print(make_present('alquilar'))
 
 # INFINITIVE -> IMPERFECT PAST 
 #RETURN TYPE : TUPLE in this order (yo, tú, él/ella/usted, nosotro/as, vosotros/as, ellos/ellas/ustedes) 
@@ -39,11 +45,16 @@ def make_imperfect(infinitive):
     else: 
         print('Lo siento. No tenemos este verbo en el sistema.')
 
+print('IMPERFECT TEST')
+print(make_imperfect('tener')) 
+print(make_imperfect('comprar')) 
+print(make_imperfect('sentarse'))
 print(make_imperfect('abrir'))
+
 # INFINITIVE -> PRETERITE PAST 
 # PARAMETER : STRING in infinitive form 
 #RETURN TYPE : TUPLE in this order (yo, tú, él/ella/usted, nosotro/as, vosotros/as, ellos/ellas/ustedes) 
-def makePreterite(infinitive):  ## MIGHT GET TRICKY WITH IRREGULAR...
+def make_preterite(infinitive):  ## MIGHT GET TRICKY WITH IRREGULAR...
     if verbs[infinitive]:    
         conjugated_verb = tuple((verbs[infinitive][2], 
                                  verbs[infinitive][1],
@@ -54,48 +65,63 @@ def makePreterite(infinitive):  ## MIGHT GET TRICKY WITH IRREGULAR...
         return conjugated_verb
     else: 
         print('Lo siento. No tenemos este verbo en el sistema.')
+    
+# print('PRETERITE TEST')
+# print(make_preterite('tener')) 
+# print(make_preterite('comprar')) 
+# print(make_preterite('sentarse'))
+# print(make_preterite('abrir'))
 
 # INFINITIVE -> FUTURE 
 # PARAMETER : STRING in infinitive form 
 #RETURN TYPE : TUPLE in this order (yo, tú, él/ella/usted, nosotro/as, vosotros/as, ellos/ellas/ustedes) 
-def makeFuture(infinitive): 
+def make_future(infinitive): 
     if verbs[infinitive]:    
-        conjugated_verb = tuple((verbs[infinitive][0], 
-                                 verbs[infinitive][1],
-                                yo_el_imperfecto(infinitive),
-                                nosotros_imperfecto(infinitive),
-                                vosotros_imperfecto(infinitive),
-                                ellos_imperfecto(infinitive))); 
+        conjugated_verb = tuple((yo_futuro(infinitive), 
+                                 tu_futuro(infinitive),
+                                el_futuro(infinitive),
+                                nosotros_futuro(infinitive),
+                                vosotros_futuro(infinitive),
+                                ellos_futuro(infinitive))); 
         return conjugated_verb
     else: 
         print('Lo siento. No tenemos este verbo en el sistema.')
-
+print('FUTURE TEST')
+print(make_future('tener')) 
+print(make_future('comprar')) 
+print(make_future('sentarse'))
+print(make_future('abrir'))
 # INFINITIVE -> CONDITIONAL  
 # PARAMETER : STRING in infinitive form 
 #RETURN TYPE : TUPLE in this order (yo, tú, él/ella/usted, nosotro/as, vosotros/as, ellos/ellas/ustedes) 
-def makeConditional(infinitive): 
+def make_conditional(infinitive): 
     if verbs[infinitive]:    
-        conjugated_verb = tuple((verbs[infinitive][0], 
-                                 verbs[infinitive][1],
-                                yo_el_imperfecto(infinitive),
-                                nosotros_imperfecto(infinitive),
-                                vosotros_imperfecto(infinitive),
-                                ellos_imperfecto(infinitive))); 
+        conjugated_verb = tuple((yo_el_condicional(infinitive), 
+                                 tu_condicional(infinitive),
+                                yo_el_condicional(infinitive),
+                                nosotros_condicional(infinitive),
+                                vosotros_condicional(infinitive),
+                                ellos_condicional(infinitive))); 
         return conjugated_verb
     else: 
-        print('Lo siento. No tenemos este verbo en el sistema.')
+        print('Lo siento. No tenemos este verbo en el sistema.') 
+print('CONDITIONAL TEST')
+print(make_conditional('tener')) 
+print(make_conditional('comprar')) 
+print(make_conditional('sentarse'))
+print(make_conditional('abrir'))
 
 ####################### SUBJUNCTIVE ################################################################
 # INFINITIVE -> PRESENT SUBJUNCTIVE 
 # PARAMETER : STRING in infinitive form 
 #RETURN TYPE : TUPLE in this order (yo, tú, él/ella/usted, nosotro/as, vosotros/as, ellos/ellas/ustedes) 
-def makePresentSubjunctive(infinitive): 
+def make_present_subjunctive(infinitive): 
     return 
 
 # INFINITIVE -> IMPERFECT SUBJUNCTIVE  
 # PARAMETER : STRING in infinitive form 
 #RETURN TYPE : TUPLE in this order (yo, tú, él/ella/usted, nosotro/as, vosotros/as, ellos/ellas/ustedes) 
-def makeImperfectSubjunctive(infinitive): 
+def make_imperfect_subjunctive(infinitive): 
     return 
 ## COMPOUND TENSES 
 
