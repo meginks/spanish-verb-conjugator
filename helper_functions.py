@@ -29,3 +29,11 @@ def get_preterite_stem(infinitive):
         preterite_form = verbs[infinitive][2] 
         return preterite_form[:-1]
 
+# TO DO 
+def get_infinitive_minus_r(infinitive): 
+    return  
+
+# TO DO 
+# make sure to handle cases where yo present form ends in -oy (-oy should be removed to form yo stem)
+def get_yo_stem(infinitive): 
+    return  

@@ -40,4 +40,53 @@ imperfect_exceptions_nos = {
     'ser': 'éramos', 
     'ir': 'íbamos', 
     'ver': 'veíamos'
+} 
+
+imperative_exceptions_tu_positive = {
+    'decir': 'di', 
+    'hacer': 'haz', 
+    'ir': 've', 
+    'poner': 'pon', 
+    'salir': 'sal', 
+    'ser': 'sé',
+    'tener': 'ten', 
+    'venir': 'ven'
+} 
+
+imperative_exceptions_tu_negative = {
+    'decir': 'no digas', 
+    'hacer': 'no hagas', 
+    'ir': 'no vayas', 
+    'poner': 'no pongas', 
+    'salir': 'no salgas', 
+    'ser': 'no seas', 
+    'tener': 'no tengas', 
+    'ver': 'no vengas'
+} 
+
+
+imperative_exceptions_usted = {
+    'ir': 'vaya', 
+    'saber': 'sepa', 
+    'ser': 'sea' 
+} 
+
+imperative_exceptions_vosotros = {
+    'ir': 'vayáis', 
+    'saber': 'sepáis', 
+    'ser': 'seáis'
+} 
+
+imperative_exceptions_nosotros_positive = {
+    'irse': 'vámonos', 
+    'ir': 'vamos', 
+    'saber': 'sepamos', 
+    'ser': 'seamos'
+}
+
+imperative_exceptions_nosotros_negative = {
+    'irse': 'no nos vayamos',
+    'ir': 'no vayamos', 
+    'saber':  'no sepamos', 
+    'ser': 'no seamos' 
 }
