@@ -89,4 +89,13 @@ imperative_exceptions_nosotros_negative = {
     'ir': 'no vayamos', 
     'saber':  'no sepamos', 
     'ser': 'no seamos' 
+} 
+
+irregular_present_subjunctive = {
+    'dar': ('dé', 'des', 'dé', 'demos', 'deis', 'den'), 
+    'estar': ('esté', 'estés', 'esté', 'estemos', 'estéis', 'estén'), 
+    'haber': ('haya', 'hayas', 'haya', 'hayamos', 'hayáis', 'hayan'), 
+    'ir': ('vaya', 'vayas', 'vaya', 'vayamos', 'vayáis', 'vayan'), 
+    'saber': ('sepa', 'sepas', 'sepa', 'sepamos', 'sepáis', 'sepan'), 
+    'ser': ('sea', 'seas', 'sea', 'seamos', 'seáis', 'sean')
 }
